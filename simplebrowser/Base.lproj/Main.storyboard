@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cri-6y-tL6">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--simplebrowser-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="simplebrowser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="https://google.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="02f-EO-IXG">
+                                <rect key="frame" x="28" y="310" width="318" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEh-l8-27y">
+                                <rect key="frame" x="167" y="348" width="30" height="30"/>
+                                <state key="normal" title="go"/>
+                                <connections>
+                                    <action selector="startBrowser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u8r-Si-cnH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7g6-i2-n7p">
+                                <rect key="frame" x="166" y="281" width="33" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="02f-EO-IXG" secondAttribute="trailing" constant="29" id="0HY-Gn-2lg"/>
+                            <constraint firstItem="02f-EO-IXG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="3yU-MZ-4g8"/>
+                            <constraint firstItem="eEh-l8-27y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="167" id="NKF-OW-Toj"/>
+                            <constraint firstItem="eEh-l8-27y" firstAttribute="top" secondItem="02f-EO-IXG" secondAttribute="bottom" constant="8" id="PEe-4M-amW"/>
+                            <constraint firstItem="7g6-i2-n7p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="166" id="ULI-c3-y4M"/>
+                            <constraint firstItem="7g6-i2-n7p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="217" id="arn-2z-bxh"/>
+                            <constraint firstItem="02f-EO-IXG" firstAttribute="top" secondItem="7g6-i2-n7p" secondAttribute="bottom" constant="8" id="oMy-oq-t2w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eEh-l8-27y" secondAttribute="bottom" constant="289" id="rY2-3w-kii"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="simplebrowser" id="UX6-rz-lGN">
+                        <barButtonItem key="rightBarButtonItem" title="info" id="L7f-rd-5kn"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="urlTextField" destination="02f-EO-IXG" id="vhH-Wb-qGm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="132.68365817091455"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qMZ-xa-V0g">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cri-6y-tL6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YwU-wW-6l5">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KMZ-O4-9yb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mif-VS-j1J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-289" y="133"/>
+        </scene>
+    </scenes>
+</document>
