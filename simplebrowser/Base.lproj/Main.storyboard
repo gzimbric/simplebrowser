@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cri-6y-tL6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cri-6y-tL6">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,14 +25,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="url.com or search" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="02f-EO-IXG">
-                                <rect key="frame" x="28" y="250" width="264" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="url or search" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="02f-EO-IXG">
+                                <rect key="frame" x="28" y="156" width="264" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkQ-hg-0mn">
-                                <rect key="frame" x="177" y="288" width="115" height="30"/>
+                                <rect key="frame" x="177" y="194" width="115" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="115" id="6Yi-XK-VIQ"/>
@@ -41,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lx5-OJ-sUU">
-                                <rect key="frame" x="28" y="288" width="115" height="30"/>
+                                <rect key="frame" x="28" y="194" width="115" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="115" id="MtA-Lh-JCb"/>
@@ -60,7 +62,7 @@
                             <constraint firstItem="Lx5-OJ-sUU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="Mfk-yu-ur9"/>
                             <constraint firstItem="wkQ-hg-0mn" firstAttribute="baseline" secondItem="Lx5-OJ-sUU" secondAttribute="baseline" id="OCk-7F-5aQ"/>
                             <constraint firstItem="02f-EO-IXG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ph8-dx-J46"/>
-                            <constraint firstItem="02f-EO-IXG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="186" id="esd-IR-zUL"/>
+                            <constraint firstItem="02f-EO-IXG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="92" id="esd-IR-zUL"/>
                             <constraint firstItem="02f-EO-IXG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="pw8-ku-cDu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -90,11 +92,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="earth" translatesAutoresizingMaskIntoConstraints="NO" id="Egk-xO-evZ">
-                                <rect key="frame" x="112" y="125" width="96" height="96"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="browsing. simplified." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qi1-gt-xlf">
-                                <rect key="frame" x="68" y="229" width="184" height="28"/>
+                                <rect key="frame" x="68" y="242" width="184" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="BRo-o9-FB0"/>
                                 </constraints>
@@ -102,21 +101,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="v. 0.1.4n" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J00-8K-KNf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="v. 0.2.1n" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J00-8K-KNf">
                                 <rect key="frame" x="129" y="538" width="62" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="Egk-xO-evZ">
+                                <rect key="frame" x="97" y="108" width="126" height="126"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Egk-xO-evZ" secondAttribute="height" multiplier="1:1" id="XRt-LK-zZP"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Egk-xO-evZ" firstAttribute="top" secondItem="4u8-pG-HwE" secondAttribute="top" constant="61" id="NJB-MN-zNx"/>
-                            <constraint firstItem="Egk-xO-evZ" firstAttribute="centerX" secondItem="qi1-gt-xlf" secondAttribute="centerX" id="Snb-fQ-Y9z"/>
+                            <constraint firstItem="Egk-xO-evZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4u8-pG-HwE" secondAttribute="leading" constant="97" id="3ko-MS-4MO"/>
+                            <constraint firstItem="qi1-gt-xlf" firstAttribute="top" secondItem="Egk-xO-evZ" secondAttribute="bottom" constant="8" id="Fca-rS-D2Y"/>
                             <constraint firstItem="4u8-pG-HwE" firstAttribute="bottom" secondItem="J00-8K-KNf" secondAttribute="bottom" constant="9" id="T4Z-Ht-Hd4"/>
-                            <constraint firstItem="qi1-gt-xlf" firstAttribute="top" secondItem="Egk-xO-evZ" secondAttribute="bottom" constant="8" symbolic="YES" id="Wwr-7A-rPz"/>
-                            <constraint firstItem="Egk-xO-evZ" firstAttribute="centerX" secondItem="A48-Xw-Gdv" secondAttribute="centerX" id="ab7-io-rqf"/>
+                            <constraint firstItem="Egk-xO-evZ" firstAttribute="centerX" secondItem="A48-Xw-Gdv" secondAttribute="centerX" id="ZWU-Dz-4sk"/>
                             <constraint firstItem="J00-8K-KNf" firstAttribute="centerX" secondItem="qi1-gt-xlf" secondAttribute="centerX" id="hjh-Zb-AhD"/>
+                            <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="Egk-xO-evZ" secondAttribute="bottom" constant="334" id="pqW-2V-Ees"/>
+                            <constraint firstItem="Egk-xO-evZ" firstAttribute="centerX" secondItem="qi1-gt-xlf" secondAttribute="centerX" id="rcx-jW-2s4"/>
+                            <constraint firstItem="Egk-xO-evZ" firstAttribute="top" secondItem="4u8-pG-HwE" secondAttribute="top" constant="44" id="vny-d0-tF5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4u8-pG-HwE"/>
                     </view>
@@ -145,6 +152,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="earth" width="96" height="96"/>
+        <image name="test" width="512" height="512"/>
     </resources>
 </document>

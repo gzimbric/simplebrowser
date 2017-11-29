@@ -53,6 +53,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
             }
             if let url = url {
                 let sfViewController = SFSafariViewController(url: url)
+                var preferredBarTintColor: UIColor? { get set }
                 self.present(sfViewController, animated: true, completion: nil)
                 print ("Now browsing via URL in SFSafariViewController")
             }
