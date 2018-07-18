@@ -1,54 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cri-6y-tL6">
-    <device id="retina4_0" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cri-6y-tL6">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HelveticaNeueLights.ttc">
-            <string>HelveticaNeue-Light</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--simplebrowser-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="simplebrowser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="url or search" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="02f-EO-IXG">
-                                <rect key="frame" x="28" y="156" width="264" height="30"/>
+                                <rect key="frame" x="19" y="173" width="337" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkQ-hg-0mn">
-                                <rect key="frame" x="177" y="194" width="115" height="30"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="115" id="6Yi-XK-VIQ"/>
-                                </constraints>
-                                <state key="normal" title="Search"/>
-                                <connections>
-                                    <action selector="searchBrowser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jqu-3q-uHp"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lx5-OJ-sUU">
-                                <rect key="frame" x="28" y="194" width="115" height="30"/>
+                                <rect key="frame" x="130.66666666666666" y="211" width="115" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="115" id="MtA-Lh-JCb"/>
+                                    <constraint firstAttribute="width" constant="115" id="Wxm-N5-XSf"/>
                                 </constraints>
-                                <state key="normal" title="URL"/>
+                                <state key="normal" title="search"/>
                                 <connections>
                                     <action selector="urlBrowser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I1Y-rb-faR"/>
                                 </connections>
@@ -56,14 +38,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Lx5-OJ-sUU" firstAttribute="top" secondItem="02f-EO-IXG" secondAttribute="bottom" constant="8" symbolic="YES" id="81R-Tc-SaO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wkQ-hg-0mn" secondAttribute="trailing" constant="28" id="Cwu-Pt-eaA"/>
-                            <constraint firstItem="wkQ-hg-0mn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Lx5-OJ-sUU" secondAttribute="trailing" constant="34" id="M0k-bN-Dz3"/>
-                            <constraint firstItem="Lx5-OJ-sUU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="Mfk-yu-ur9"/>
-                            <constraint firstItem="wkQ-hg-0mn" firstAttribute="baseline" secondItem="Lx5-OJ-sUU" secondAttribute="baseline" id="OCk-7F-5aQ"/>
-                            <constraint firstItem="02f-EO-IXG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ph8-dx-J46"/>
-                            <constraint firstItem="02f-EO-IXG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="92" id="esd-IR-zUL"/>
-                            <constraint firstItem="02f-EO-IXG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="pw8-ku-cDu"/>
+                            <constraint firstItem="02f-EO-IXG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="19" id="Vy1-N7-vcE"/>
+                            <constraint firstItem="02f-EO-IXG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YBV-nE-QeB"/>
+                            <constraint firstItem="02f-EO-IXG" firstAttribute="centerX" secondItem="Lx5-OJ-sUU" secondAttribute="centerX" id="nv9-Jn-Y1t"/>
+                            <constraint firstItem="Lx5-OJ-sUU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="103" id="oXw-eS-2Cb"/>
+                            <constraint firstItem="Lx5-OJ-sUU" firstAttribute="top" secondItem="02f-EO-IXG" secondAttribute="bottom" constant="8" symbolic="YES" id="ybc-nf-Ct9"/>
+                            <constraint firstItem="02f-EO-IXG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="85" id="zri-gI-YFD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -75,62 +55,60 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="searchButton" destination="wkQ-hg-0mn" id="BAb-pJ-Za5"/>
                         <outlet property="urlButton" destination="Lx5-OJ-sUU" id="2wX-3F-Ry2"/>
                         <outlet property="urlTextField" destination="02f-EO-IXG" id="vhH-Wb-qGm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="476" y="132.68365817091455"/>
+            <point key="canvasLocation" x="474.375" y="132.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="o7Y-T9-eBv">
             <objects>
                 <viewController id="yha-pZ-1Vg" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A48-Xw-Gdv">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="browsing. simplified." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qi1-gt-xlf">
-                                <rect key="frame" x="68" y="242" width="184" height="28"/>
+                                <rect key="frame" x="95" y="210" width="184" height="28"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="BRo-o9-FB0"/>
+                                    <constraint firstAttribute="height" constant="28" id="3j3-EJ-c14"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="v. 0.2.1n" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J00-8K-KNf">
-                                <rect key="frame" x="129" y="538" width="62" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="v. 0.3n" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J00-8K-KNf">
+                                <rect key="frame" x="162" y="748" width="51" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="Egk-xO-evZ">
-                                <rect key="frame" x="97" y="108" width="126" height="126"/>
+                                <rect key="frame" x="134.66666666666666" y="101" width="106" height="107"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Egk-xO-evZ" secondAttribute="height" multiplier="1:1" id="XRt-LK-zZP"/>
+                                    <constraint firstAttribute="width" constant="106" id="3EK-al-Krh"/>
+                                    <constraint firstAttribute="height" constant="107" id="EMk-c1-yQ4"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Egk-xO-evZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4u8-pG-HwE" secondAttribute="leading" constant="97" id="3ko-MS-4MO"/>
-                            <constraint firstItem="qi1-gt-xlf" firstAttribute="top" secondItem="Egk-xO-evZ" secondAttribute="bottom" constant="8" id="Fca-rS-D2Y"/>
-                            <constraint firstItem="4u8-pG-HwE" firstAttribute="bottom" secondItem="J00-8K-KNf" secondAttribute="bottom" constant="9" id="T4Z-Ht-Hd4"/>
-                            <constraint firstItem="Egk-xO-evZ" firstAttribute="centerX" secondItem="A48-Xw-Gdv" secondAttribute="centerX" id="ZWU-Dz-4sk"/>
-                            <constraint firstItem="J00-8K-KNf" firstAttribute="centerX" secondItem="qi1-gt-xlf" secondAttribute="centerX" id="hjh-Zb-AhD"/>
-                            <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="Egk-xO-evZ" secondAttribute="bottom" constant="334" id="pqW-2V-Ees"/>
-                            <constraint firstItem="Egk-xO-evZ" firstAttribute="centerX" secondItem="qi1-gt-xlf" secondAttribute="centerX" id="rcx-jW-2s4"/>
-                            <constraint firstItem="Egk-xO-evZ" firstAttribute="top" secondItem="4u8-pG-HwE" secondAttribute="top" constant="44" id="vny-d0-tF5"/>
+                            <constraint firstItem="qi1-gt-xlf" firstAttribute="top" secondItem="Egk-xO-evZ" secondAttribute="bottom" constant="2" id="0Lg-Um-rko"/>
+                            <constraint firstItem="qi1-gt-xlf" firstAttribute="centerX" secondItem="J00-8K-KNf" secondAttribute="centerX" id="51X-8o-ltY"/>
+                            <constraint firstItem="Egk-xO-evZ" firstAttribute="top" secondItem="4u8-pG-HwE" secondAttribute="top" constant="13" id="6mo-OZ-MGf"/>
+                            <constraint firstItem="Egk-xO-evZ" firstAttribute="centerX" secondItem="qi1-gt-xlf" secondAttribute="centerX" id="HVw-jM-B9i"/>
+                            <constraint firstItem="4u8-pG-HwE" firstAttribute="bottom" secondItem="J00-8K-KNf" secondAttribute="bottom" constant="9" id="bJ0-QE-Zbd"/>
+                            <constraint firstItem="Egk-xO-evZ" firstAttribute="centerX" secondItem="A48-Xw-Gdv" secondAttribute="centerX" id="mRD-LU-yIc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4u8-pG-HwE"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PvN-KJ-G0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1186.875" y="130.98591549295776"/>
+            <point key="canvasLocation" x="1186.875" y="130"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qMZ-xa-V0g">
@@ -138,7 +116,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cri-6y-tL6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YwU-wW-6l5">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

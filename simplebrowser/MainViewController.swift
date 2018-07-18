@@ -18,8 +18,6 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(MainViewController.dismissKeyboard)))
         
-        self.searchButton.layer.cornerRadius = 5
-        self.searchButton.alpha = 0.70
         self.urlButton.layer.cornerRadius = 5
         self.urlButton.alpha = 0.70
         
@@ -40,33 +38,24 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     
+    func validateUrl (urlString: NSString) -> Bool {
+        let urlRegEx = "((?:http|https)://)?(?:www\\.)?[\\w\\d\\-_]+\\.\\w{2,3}(\\.\\w{2})?(/(?<=/)(?:[\\w\\d\\-./_]+)?)?"
+        return NSPredicate(format: "SELF MATCHES %@", urlRegEx).evaluate(with: urlString)
+    }
+    
     @IBAction func urlBrowser(_ sender: Any) {
         if let urlText = self.urlTextField.text {
-            let urlString = urlText.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
             let url: URL?
-            if (urlString?.hasPrefix("http://"))! {
-                url = URL(string: urlString!)
-            } else if (urlString?.hasPrefix("https://"))! {
-                url = URL(string: urlString!)
+            if (NSURL(string: urlText) != nil) {
+                url = URL(string: "http://" + urlText)
+                print ("Now browsing via URL in SFSafariViewController")
             } else {
-                url = URL(string: "http://" + urlString!)
+                url = URL(string: "https://www.google.com/search?q=" + urlText)
+                print ("Now browsing via Search in SFSafariViewController")
             }
             if let url = url {
                 let sfViewController = SFSafariViewController(url: url)
-                var preferredBarTintColor: UIColor? { get set }
                 self.present(sfViewController, animated: true, completion: nil)
-                print ("Now browsing via URL in SFSafariViewController")
-            }
-        }
-    }
-    
-    @IBAction func searchBrowser(_ sender: Any) {
-        if let urlText = self.urlTextField.text {
-            let urlString = urlText.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
-            if let url = URL(string: "https://www.google.com/search?q=" + urlString!) {
-                let sfViewController = SFSafariViewController(url: url)
-                self.present(sfViewController, animated: true, completion: nil)
-                print ("Now browsing via Search in SFSafariViewController")
             }
         }
     }
